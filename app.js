@@ -6,6 +6,9 @@ app.set('view engine','jade');
 app.use(express.static('public'));
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(session({ secret: 'keyboard cat',proxy: true,resave: true,saveUninitialized: true, cookie: { maxAge: 60000 }}));
+require('./app/admin/routes/denomination.routes.js')(app);
 //app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + '/public/uploads' }));
 const mongoose = require('mongoose');
 var multer = require('multer');
@@ -20,7 +23,7 @@ var userschema =  new Schema(
     });
     var user = mongoose.model('admins',userschema);
     //var schema = mongoose.Schema;
-    var denominationSchema =  new Schema(
+   /* var denominationSchema =  new Schema(
     {
         countryid: {type: String, required: true},
         amount: {type: Number, required: true},
@@ -31,7 +34,7 @@ var userschema =  new Schema(
         {
             countryname: {type: String, required: true},   
         });
-        var con = mongoose.model('country',countrySchema);
+        var con = mongoose.model('country',countrySchema);*/
 
     var noteschema= new Schema(
         {
@@ -59,7 +62,6 @@ const dbConfig = require('./config/database.config.js');
 mongoose.Promise = global.Promise;
 //require('./app/routes/denomination.routes.js')(app);
 
-app.use(session({ secret: 'keyboard cat',proxy: true,resave: true,saveUninitialized: true, cookie: { maxAge: 60000 }}));
 
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true
@@ -69,11 +71,11 @@ mongoose.connect(dbConfig.url, {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
-app.get('/', function (req, res) {
+app.get('/admin/', function (req, res) {
    
 
-    console.log(req.session.name);
-	if (req.session.name) {
+    console.log(req.session.fname);
+	if (req.session.fname) {
         res.redirect('/denomination')	;
 	}
 	else
@@ -96,8 +98,10 @@ app.post('/login', function (req, res) {
 
 
        if (users && users.length) { 
+
+        //console.log("aaaa",users[0].name);
            
-           req.session.name =users[0].name;
+           req.session.fname =users[0].name;
 
         res.redirect('/denomination');
      } else {
@@ -106,57 +110,16 @@ app.post('/login', function (req, res) {
      }
        
        
+    })
     });
-
-    function sayhi()
-    {
-        console.log("hi");
-    }
+/*
+    
     app.get('/denomination', function (req, res) 
     {
-        if (req.session.name)
-        {
-            //var o = {}
-        deno.find({},'countryid amount', function(err, denomination)
-        {
-            //denomination.push('countryname');
-           // console.log("dddd",denomination);
-            if(err) throw err;
-            var denominationlist;
-            
        
-        con.find({}, function(err, countrylist)
-        {
-            console.log(2);
-            console.log(countrylist);
-            if(err) throw err;
-            denomination = JSON.parse(JSON.stringify(denomination));
-            for(var j=0;j<countrylist.length;j++)
-            {
-                for(var i = 0;i < denomination.length; i++)
-                {
-                    if(countrylist[j]._id==denomination[i].countryid)
-                    {
-                        denomination[i].countryname = countrylist[j].countryname;
-                    }
-                }
-            }
-            console.log(denomination);
-         res.render('denomination',{denominationlist: denomination}); 
-         });
+    });   */
         
-        });
-
-
-  
-            
-    }else
-    {
-        res.redirect('/');
-    }
-    });   
-        
-        });
+    //    });
                /* for(var i = 0; i < countrylist.length; i++)
                 {
                     o['_id'] = [];
@@ -195,6 +158,7 @@ app.post('/login', function (req, res) {
 
 
     });*/
+    /*
 app.get('/deno_create',function (req,res)
 {
     if(req.session.name)
@@ -210,7 +174,8 @@ app.get('/deno_create',function (req,res)
     }else{
         res.redirect('/');
     }
-});
+});*/
+/*
 app.post('/deno_create',function (req,res)
 {
     if(req.session.name)
@@ -232,9 +197,8 @@ app.post('/deno_create',function (req,res)
            }
     
 
-});
-app.get('/deno_edit/:id',function(req,res)
-{
+});*/
+/*{
     console.log('get')
     if(req.session.name){
         var obid= req.params.id;
@@ -268,20 +232,7 @@ app.post('/deno_edit',function(req,res)
             res.redirect('/');
         }
     });
-    app.get('/delete/:id',function(req,res)
-{
-    if(req.session.name)
-    {
-   var obid= req.params.id;
-   deno.findByIdAndRemove(obid,function(err){
-       if(err) throw err;
-       res.redirect('/denomination');
-   });
-}else
-{
-    res.redirect('/');
-}
-});
+*/
 app.get('/country_list',function(req,res){
 if(req.session.name)
 {
@@ -402,7 +353,7 @@ app.post('/country_create',function(req,res){
 
     app.get('/note_list',function(req,res){
 
-        if(req.session.name)
+        if(req.session.fname)
         {
             
             note.find({},function(err,notes)
