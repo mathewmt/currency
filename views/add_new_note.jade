@@ -1,73 +1,6 @@
-doctype html
-html(lang='en')
-  head
-    title Bootstrap Example
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
-    style.
-      /* Remove the navbar's default margin-bottom and rounded borders */
-      .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      }
-      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-      .row.content {height: 450px}
-      /* Set gray background color and 100% height */
-      .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-      }
-      /* Set black background color, white text and some padding */
-      footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-      }
-      /* On small screens, set height to 'auto' for sidenav and grid */
-      @media screen and (max-width: 767px) {
-      .sidenav {
-      height: auto;
-      padding: 15px;
-      }
-      .row.content {height:auto;}
-      }
-  body
-    nav.navbar.navbar-inverse
-      .container-fluid
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='#') Logo
-        #myNavbar.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li.active
-              a(href='#') Home
-            li
-              a(href='#') About
-            li
-              a(href='#') Projects
-            li
-              a(href='#') Contact
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='#')
-                span.glyphicon.glyphicon-log-in
-                |  Login
-    .container-fluid.text-center
-      .row.content
-        .col-sm-2.sidenav
-          p
-            a(href='/denominations') Denominations
-          p
-            a(href='#') Link
-          p
-            a(href='#') Link
+extend layout
+
+block content
         .col-sm-9.text-left
           .row
             .col-sm-4
@@ -102,9 +35,210 @@ html(lang='en')
                               option(value="") NO VALUE
 
                     .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Home Image:
+                      .col-sm-10
+                      input(type='file', name='homeimage')
+                       
+                      
+                    .row(style='padding-bottom:15px;')
+                      .col-sm-12
+                            h3 Add features
+                      .col-sm-10
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Side 1 Image
+                      .col-sm-10
+                      input(type='file', name='side1')
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature1:
+                      .col-sm-10
+                        input(type='text', name='feature1')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-2
+                        input(type='file', name='image1') 
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature2:
+                      .col-sm-10
+                        input(type='text', name='feature2')  
                       label.control-label.col-sm-2(for='passord') Image:
                       .col-sm-10
-                        input(type='file', name='image', multiple='')                          
+                        input(type='file', name='image2')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature3:
+                      .col-sm-10
+                        input(type='text', name='feature3')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image3')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature4:
+                      .col-sm-10
+                        input(type='text', name='feature4')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image4')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature5:
+                      .col-sm-10
+                        input(type='text', name='feature5')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image5')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature6:
+                      .col-sm-10
+                        input(type='text', name='feature6')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image6')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature7:
+                      .col-sm-10
+                        input(type='text', name='feature7')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image7')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature8:
+                      .col-sm-10
+                        input(type='text', name='feature8')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image8')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature9:
+                      .col-sm-10
+                        input(type='text', name='feature9')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image9')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature10:
+                      .col-sm-10
+                        input(type='text', name='feature10')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image10')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature11:
+                      .col-sm-10
+                        input(type='text', name='feature11')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image11')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature12:
+                      .col-sm-10
+                        input(type='text', name='feature12')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image12')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature13:
+                      .col-sm-10
+                        input(type='text', name='feature13')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image13')
+                        br
+                        br
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Side 2 Image
+                      .col-sm-10
+                      input(type='file', name='side2')
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature14:
+                      .col-sm-10
+                        input(type='text', name='feature14')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image14')
+                        br
+                        br
+                    
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature15:
+                      .col-sm-10
+                        input(type='text', name='feature15')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image15')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature16:
+                      .col-sm-10
+                        input(type='text', name='feature16')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image16')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature17:
+                      .col-sm-10
+                        input(type='text', name='feature17')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image17')
+                        br
+                        br
+
+                    .row(style='padding-bottom:15px;')
+                      label.control-label.col-sm-2(for='passord') Feature18:
+                      .col-sm-10
+                        input(type='text', name='feature18')  
+                      label.control-label.col-sm-2(for='passord') Image:
+                      .col-sm-10
+                        input(type='file', name='image18')
+                        br
+                        br
+
+
+
+
+
+
+
+                       
 
                     .row
                       .control-label.col-sm-2

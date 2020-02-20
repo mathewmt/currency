@@ -1,0 +1,306 @@
+doctype transitional
+html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-websqldatabase.indexeddb.hashchange.history.draganddrop.websockets.rgba.hsla.multiplebgs.backgroundsize.borderimage.borderradius.boxshadow.textshadow.opacity.cssanimations.csscolumns.cssgradients.no-cssreflections.csstransforms.csstransforms3d.csstransitions.fontface.generatedcontent.video.audio.localstorage.sessionstorage.webworkers.applicationcache.svg.inlinesvg.smil.svgclippaths(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    link(rel='stylesheet', href='http://localhost:5000/style.css')
+    // <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+    script(type='text/javascript', src='http://localhost:5000/jquery-1.7.2.min.js')
+    script(src='http://localhost:5000/plugins.js', type='text/javascript')
+    style(type='text/css').
+      .imgbrdr{border:4px solid #2469b5;}
+      .numberbar2018{left:540px;}
+      .numline2018{ height:155px;}
+      .numberbar6 .descimg3 {
+      top: -563px;
+      right: -305px;
+      }
+      .numberbar6 .descimg2 {
+      top: -562px !important;
+      left: -612px !important;
+      }
+      .numberbar6 .descimg1 {
+      top: -430px;left:-21px;
+      }
+      .numberbar8 .descimg2 {
+      top: -562px;
+      left: -800px;
+      }
+      .numberbar11 .descimg2 {
+      top: -455px;
+      left: -736px;
+      }
+      .numberbar11 .descimg3 {
+      top: -592px;
+      left:-173px;
+      }
+      .numberbar11 .descimg11 {
+      top: -331px;
+      left:-173px;
+      }
+      .numberbar12 .descimg2 {
+      top: -532px;
+      left: -1127px;
+      }
+      .numberbar12 .descimg1 {
+      top: -500px;
+      margin-left: -244px;
+      }
+      @media  (max-width: 1366px)
+      {
+      .numberbar2018{left:266px;}
+      .numline2018{ height:110px;}
+      .numberbar6 .descimg3 {
+      top: -295px;
+      left: 119px;
+      }
+      .numberbar6 .descimg2 {
+      top: -295px !important;
+      left: -253px !important;
+      }
+      .numberbar6 .descimg1 {
+      top: -242px;
+      }
+      .numberbar8 .descimg2 {
+      top: -295px;
+      left: -300px;
+      }
+      .numberbar11 .descimg11 {
+      top: -187px;
+      left: -26px;
+      }
+      .numberbar11 .descimg2 {
+      top: -240px;
+      left: -290px;
+      }
+      .numberbar11 .descimg3 {
+      top: -326px;
+      left: -26px;
+      }
+      .numberbar12 .descimg1 {
+      top: -240px;
+      margin-left: -133px !important;
+      }
+      .numberbar12 .descimg2 {
+      top: -300px;
+      left: -520px;
+      }
+      }
+  script(src='http://localhost:5000/main.js', type='text/javascript')
+  body
+    link(href='http://localhost:5000/global.css', rel='stylesheet')
+    .section.content
+      .wrapper
+        .note-tabpanel
+          .note-tabs(style='float: left; clear: none; ')
+            ul
+              li.active Obverse
+              li Reverse
+          div(style='clear:both')
+          .note-tabdetails
+            #box1.note-box
+              .note500
+                img(src='http://localhost:5000/uploads/#{side1}', alt='RBI 500')
+              .noteho500
+                img(src='http://localhost:5000/uploads/#{side1}', alt='RBI 500')
+              .notedesc
+                .instruction Rollover to view features of the New ₹500 Notes
+                .notewrap
+                  .numberbar.numberbar1
+                    .numcircle 1
+                    .numline.numline1
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[0].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 1
+                      .desctxt #{side1features[0].feature}
+                .notewrap
+                  .numberbar.numberbar2
+                    .numcircle 2
+                    .numline.numline2
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[1].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 2
+                      .desctxt #{side1features[1].feature}
+                .notewrap
+                  .numberbar.numberbar3
+                    .numcircle 3
+                    .numline.numline3
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side1features[2].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 3
+                      .desctxt #{side1features[2].feature}
+                .notewrap
+                  .numberbar.numberbar4
+                    .numcircle 4
+                    .numline.numline4
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side1features[3].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 4
+                      .desctxt #{side1features[3].feature}
+                .notewrap
+                  .numberbar.numberbar2018
+                    .numcircle 5
+                    .numline.numline2018
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[4].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 5
+                      .desctxt #{side1features[4].feature}
+                .notewrap
+                  .numberbar.numberbar5
+                    .numcircle 6
+                    .numline.numline5
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[5].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 6
+                      .desctxt #{side1features[5].feature}
+                .notewrap
+                  .numberbar.numberbar6
+                    .numcircle 7
+                    .numline.numline6
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[6].image}', alt='RBI')
+                    
+                  .descbar
+                    .showdescbar
+                      .descnum 7
+                      .desctxt
+                        | #{side1features[6].feature}
+                .notewrap
+                  .numberbar.numberbar7
+                    .numcircle 8
+                    .numline.numline7
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[7].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 8
+                      .desctxt #{side1features[7].feature}
+                .notewrap
+                  .numberbar.numberbar8
+                    .numcircle 9
+                    .numline.numline8
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side1features[8].image}', alt='RBI')
+                    
+                  .descbar
+                    .showdescbar
+                      .descnum 9
+                      .desctxt
+                        | #{side1features[8].feature}
+                .notewrap
+                  .numberbar.numberbar9
+                    .numcircle 10
+                    .numline.numline9
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[9].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 10
+                      .desctxt
+                        | #{side1features[9].feature}
+                .notewrap
+                  .numberbar.numberbar10
+                    .numcircle 11
+                    .numline.numline10
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side1features[10].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 11
+                      .desctxt #{side1features[10].feature}
+                .notewrap
+                  .numberbar.numberbar11
+                    .numcircle 12
+                    .numline.numline11
+                    
+                    .imgbar.descimg2
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[11].image}', alt='RBI')
+                    
+                  .descbar
+                    .desctxt1
+                      span For visually impaired:
+                      |  Intaglio or raised printing of Mahatma Gandhi portrait, Ashoka pillar emblem, bleed lines and identification mark continue
+                    .showdescbar
+                      .descnum 12
+                      .desctxt #{side1features[11].feature}
+                .notewrap
+                  .numberbar.numberbar12
+                    .numcircle 13
+                    .numline.numline12
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[12].image}', alt='RBI')
+                    
+                  .descbar
+                    .desctxt1
+                      span For visually impaired:
+                      |  Intaglio or raised printing of Mahatma Gandhi portrait, Ashoka pillar emblem, bleed lines and identification mark continue
+                    .showdescbar
+                      .descnum 13
+                      .desctxt #{side1features[12].feature}
+            #box2.note-box
+              .note500
+                img(src='http://localhost:5000/uploads/#{side2}', alt='RBI 500')
+              .noteho500
+                img(src='http://localhost:5000/uploads/#{side2}', alt='RBI 500')
+              .notedesc
+                .instruction Rollover to view features of the New ₹500 Notes
+                .notewrap
+                  .numberbar.numberbar13
+                    .numcircle 14
+                    .numline.numline13
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side2features[0].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 14
+                      .desctxt #{side2features[0].feature} 
+                .notewrap
+                  .numberbar.numberbar14
+                    .numcircle 15
+                    .numline.numline14
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side2features[1].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 15
+                      .desctxt #{side2features[1].feature} 
+                .notewrap
+                  .numberbar.numberbar15
+                    .numcircle 16
+                    .numline.numline15
+                    .imgbar.descimg1
+                      img.imgbrdr(src='http://localhost:5000/uploads/#{side2features[2].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 16
+                      .desctxt #{side2features[2].feature} 
+                .notewrap
+                  .numberbar.numberbar16
+                    .numcircle 17
+                    .numline.numline16
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side2features[3].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 17
+                      .desctxt #{side2features[3].feature} 
+                .notewrap
+                  .numberbar.numberbar17
+                    .numcircle 18
+                    .numline.numline17
+                    .imgbar.descimg1
+                      img(src='http://localhost:5000/uploads/#{side2features[4].image}', alt='RBI')
+                  .descbar
+                    .showdescbar
+                      .descnum 18
+                      .desctxt #{side2features[4].feature} 
