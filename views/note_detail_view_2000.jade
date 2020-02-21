@@ -9,13 +9,13 @@ html
     script(src='http://localhost:5000/2000/main.js', type='text/javascript')
   body
     .section.content
-      .wrapper.color01
+      .wrapper.color
         .backbtn
           .note-tabpanel
-            .note-tabs(style='float: left; clear: none; ')
+            .note-tabs(style='float: right; clear: none; ')
               ul
-                li.active Obverse
-                li Reverse
+                li.active Front
+                li Back
             .posterLink(style='float: right; clear: none; ')
             div(style='clear:both')
             .note-tabdetails
@@ -25,7 +25,7 @@ html
                 .noteho500
                   img(src='http://localhost:5000/uploads/#{side1}', alt='RBI 500')
                 .notedesc
-                  .instruction Rollover to view features of the New ₹2000 Notes
+                  .instruction 
                   .notewrap
                     .numberbar.numberbar2000
                       .numcircle 13
@@ -34,8 +34,7 @@ html
                         img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[12].image}', alt='RBI')
                     .descbar
                       .desctxt1
-                        span For visually impaired:
-                        |  Intaglio or raised printing of Mahatma Gandhi portrait, Ashoka Pillar emblem, bleed lines and identification mark
+                        
                       .showdescbar
                         .descnum 13
                         .desctxt #{side1features[12].feature}
@@ -187,7 +186,7 @@ html
                 .noteho500
                   img(src='http://localhost:5000/uploads/#{side2}', alt='RBI 500')
                 .notedesc
-                  .instruction Rollover to view features of the New ₹2000 Notes
+                  .instruction 
                   .notewrap
                     .numberbar.numberbar2014
                       .numcircle 14

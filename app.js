@@ -910,11 +910,80 @@ app.get('/note_detail_view/:id',function(req,res){
         res.render('note_detail_view_20',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
         if(denomination.amount==100)
         res.render('note_detail_view_100',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        if(denomination.amount==10)
+        res.render('note_detail_view_10',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
     });
 });
    
 
 });
+
+
+
+
+
+
+app.get('/homepage',function(req,res){
+
+   
+        note.find({countryname: "5e436ae777823942efabf62f"},function(err,notes)
+            {
+                if(err) throw err;
+            res.render('homepage',{notelist: notes});
+            });
+    
+
+    
+
+});
+
+app.post('/homepage',function(req,res){
+
+    var country = req.body.countryname;
+
+    con.find({ "countryname": { $regex: '.*' + country + '.*' } }, function(err, countrylist)
+    {
+        console.log("qwertyqwerty",countrylist);
+        if(err) throw err;
+        if(countrylist[0])
+        {
+        var countryid = countrylist[0]._id;
+       // res.send(countrylist[0].countryname);
+
+        note.find({countryname:countryid},function(err,notes)
+            {
+            res.render('homepage',{notelist: notes});
+            });
+        }
+        else
+        {
+            var notes=[];
+            res.render('homepage',{notelist: notes});
+        }
+    });
+
+    
+
+});
+
+app.get('/readCountry',function(req,res)
+{
+    var country= req.query.searchterm;
+    
+    con.find({ "countryname": { $regex: '.*' + country + '.*' } }, function(err, countrylist)
+    {
+        console.log("qwertyqwerty",countrylist);
+        if(err) throw err;
+        if(countrylist[0])
+        res.send(countrylist[0].countryname);
+        else
+        {
+            res.send('');
+        }
+    });
+
+});
+
     /*app.post('/select_country_note',function(req,res){
     
         if(req.session.name)
