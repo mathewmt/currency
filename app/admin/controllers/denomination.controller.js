@@ -37,7 +37,7 @@ exports.createform = (req, res) => {
         });
     
     }else{
-        res.redirect('/');
+        res.redirect('/admin');
     }
 };
  
@@ -82,21 +82,10 @@ exports.findAll = (req, res) => {
             
     }else
     {
-        res.redirect('/');
+        res.redirect('/admin');
     }
-//res.sendFile('../../denominations.html');
-//res.sendFile('denominations.html', { root: '/var/node/currency' });
 };
 
-// Find a single note with a noteId
-exports.findOne = (req, res) => {
-
-};
-
-// Update a note identified by the noteId in the request
-exports.update = (req, res) => {
-
-};
 
 // Delete a note with the specified noteId in the request
 exports.delete = (req, res) => {
@@ -111,7 +100,7 @@ exports.delete = (req, res) => {
    });
     }else
     {
-        res.redirect('/');
+        res.redirect('/admin');
     }
 
 
