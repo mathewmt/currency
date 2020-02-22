@@ -121,7 +121,7 @@ var storage = multer.diskStorage({
             }else
               {
                
-                console.log("homeimage");
+                //console.log("homeimage");
 
                 if(file.homeimage)
                     var homeimage= file.homeimage[0].filename;
