@@ -217,8 +217,8 @@ var storage = multer.diskStorage({
                 
                 }
       });
-
-var server = app.listen(5000, function () 
+      
+var server = app.listen(process.env.PORT || 5000, function () 
 {
     console.log('Node server is running..');
 });
