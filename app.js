@@ -6,7 +6,6 @@ app.set('view engine','jade');
 app.use(express.static('public'));
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + '/public/uploads' }));
 const mongoose = require('mongoose');
 var multer = require('multer');
 var nodemailer = require('nodemailer');
@@ -21,8 +20,6 @@ require('./app/admin/routes/note.routes.js')(app);
 require('./app/admin/routes/adminuser.routes.js')(app);
 require('./app/user/routes/usernote.routes.js')(app);
 require('./app/user/routes/static.routes.js')(app);
-
-
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true
 }).then(() => {
@@ -32,9 +29,6 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 var Schema = mongoose.Schema;
-
-
-
     // SET STORAGE
     
 var storage = multer.diskStorage({
@@ -48,12 +42,7 @@ var storage = multer.diskStorage({
    
   var upload = multer({ storage: storage })
 
-
-
- 
-
-
-
+  //uploading currencies
 
     app.post('/add_new_note', upload.fields([{
         name: 'homeimage', maxCount: 1
@@ -99,27 +88,16 @@ var storage = multer.diskStorage({
         name: 'image18', maxCount: 1
       },]),(req, res, next) => {
         
-        
-            var countryId= req.body.countryId;
+                var countryId= req.body.countryId;
            // console.log("aaa",countryId);
-          
-
-         
+           
             const file = req.files;
             
-            console.log("helloooooooooooooo",file);
-            
-
-
-
-
-
 
             const note          = require('./app/admin/models/note.model.js');
             const con           = require('./app/admin/models/country.model.js');
             const deno          = require('./app/admin/models/denomination.model.js');
-
-            
+        
 
             
             if (!file.homeimage) 
@@ -199,9 +177,8 @@ var storage = multer.diskStorage({
                 if(file.image13 &&  req.body.feature13)
                      side1features.push({feature: req.body.feature13,image:file.image13[0].filename}); 
 
-                
-                    
-
+            
+             
                 var side2features = [];
 
 
@@ -219,10 +196,6 @@ var storage = multer.diskStorage({
 
                 if(file.image18 &&  req.body.feature15)
                      side2features.push({feature: req.body.feature18,image:file.image18[0].filename});
-
-
-
-
                   var data= note(
                       {
       
@@ -233,10 +206,7 @@ var storage = multer.diskStorage({
                         side1features: side1features,
                         side2: side2,
                         side2features: side2features
-
-
-                         
-      
+   
                   });
                   data.save(function (err,notes)
                  {
@@ -248,178 +218,6 @@ var storage = multer.diskStorage({
                 }
       });
 
-
-
-
-
-
-
-/*
-
-app.get('/note_detail_view/:id',function(req,res){
-    var obid= req.params.id;
-    console.log(obid);
-    note.findById(obid,function(err,result){
-        if(err) throw err;
-
-        console.log(";;;;;;;;;;;;;",result.denominationvalue);
-        var obid = result.denominationvalue;
-    deno.findById(obid,function(err,denomination){
-            if(err) throw err;
-        
-        
-        if(denomination.amount==500)
-        res.render('note_detail_view_500',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
-        if(denomination.amount==200)
-        res.render('note_detail_view_200',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
-        if(denomination.amount==50)
-        res.render('note_detail_view_50',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
-        if(denomination.amount==2000)
-        res.render('note_detail_view_2000',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
-        if(denomination.amount==20)
-        res.render('note_detail_view_20',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
-        if(denomination.amount==100)
-        res.render('note_detail_view_100',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
-        if(denomination.amount==10)
-        res.render('note_detail_view_10',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
-    });
-});
-   
-
-});*/
-
-
-
-
-/*
-
-app.get('/homepage',function(req,res){
-
-   
-        note.find({countryname: "5e436ae777823942efabf62f"},function(err,notes)
-            {
-                if(err) throw err;
-            res.render('homepage',{notelist: notes});
-            });
-    
-
-    
-
-});*/
-/*
-app.post('/homepage',function(req,res){
-
-    var country = req.body.countryname;
-
-    con.find({ "countryname": { $regex: '.*' + country + '.*' } }, function(err, countrylist)
-    {
-        console.log("qwertyqwerty",countrylist);
-        if(err) throw err;
-        if(countrylist[0])
-        {
-        var countryid = countrylist[0]._id;
-       // res.send(countrylist[0].countryname);
-
-        note.find({countryname:countryid},function(err,notes)
-            {
-            res.render('homepage',{notelist: notes});
-            });
-        }
-        else
-        {
-            var notes=[];
-            res.render('homepage',{notelist: notes});
-        }
-    });
-
-    
-
-});*/
-/*
-app.get('/readCountry',function(req,res)
-{
-    var country= req.query.searchterm;
-    
-    con.find({ "countryname": { $regex: '.*' + country + '.*' } }, function(err, countrylist)
-    {
-        console.log("qwertyqwerty",countrylist);
-        if(err) throw err;
-        if(countrylist[0])
-        res.send(countrylist[0].countryname);
-        else
-        {
-            res.send('');
-        }
-    });
-
-});*/
-
-    /*app.post('/select_country_note',function(req,res){
-    
-        if(req.session.name)
-    {
-        var countname= req.body.countryId;
-        note.find({countryname: countname},function(err,notes)
-        {
-            if (err) throw err;
-            res.render('note_list',{notelist: notes});
-        });
-    }else{
-        res.redirect('/');
-    }
-    });
-    app.get('/add_new_note/:countryname',function(req,res)
-    {
-        if(req.session.name)
-    {
-        var countryname= req.params.countryname;
-        con.find({countryname: countryname },function(err,country)
-        {
-            if(err)  throw(err);
-            res.render('add_new_note',{countryname: country});
-        }
-        );
-        
-    }else{
-        res.redirect('/');
-        }
-    });*/
-
-    /*app.post('/select_country_note',function(req,res){
-    
-        if(req.session.name)
-    {
-        var countname= req.body.countryId;
-        deno.find({countryid: countname},function(err,denomination)
-        {
-            if(err) throw err;
-            res.render('select_denomination_note',{denominationlist: denomination});
-        });
-    }else{
-        res.redirect('/');
-    }
-});*/
-        
-   // res.render('home');
-   /* var name = req.body.email + ' ' + req.body.lastName;
-
-    req.session.fname = req.body.email;
-     
-    
-    res.sendFile(__dirname + '/home.html');*/
-
-
-/*app.put('/update-data', function (req, res) {
-    res.send('PUT Request');
-});
-
-
-
-app.delete('/delete-data', function (req, res) {
-    res.send('DELETE Request');
-});
-
-*/
 var server = app.listen(5000, function () 
 {
     console.log('Node server is running..');
