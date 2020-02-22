@@ -5,17 +5,17 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
   link(href='https://fonts.googleapis.com/css?family=Rubik:400,700', rel='stylesheet')
-  link(rel='stylesheet', href='http://localhost:5000/theme/fonts/icomoon/style.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/bootstrap.min.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/magnific-popup.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/jquery-ui.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/owl.carousel.min.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/owl.theme.default.min.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/bootstrap-datepicker.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/fonts/flaticon/font/flaticon.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/aos.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/rangeslider.css')
-  link(rel='stylesheet', href='http://localhost:5000/theme/css/style.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/fonts/icomoon/style.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/bootstrap.min.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/magnific-popup.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/jquery-ui.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/owl.carousel.min.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/owl.theme.default.min.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/bootstrap-datepicker.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/fonts/flaticon/font/flaticon.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/aos.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/rangeslider.css')
+  link(rel='stylesheet', href='#{baseurl}/theme/css/style.css')
   body
     .site-wrap
       .site-mobile-menu
@@ -28,12 +28,12 @@ html(lang='en')
           .row.align-items-center
             .col-11.col-xl-2
               h1.mb-0.site-logo
-                a.text-white.h2.mb-0(href='index.html') Counterfeit Note Detection
+                a.text-white.h1.mb-0(href='index.html') CND
             .col-12.col-md-10.d-none.d-xl-block
               nav.site-navigation.position-relative.text-right(role='navigation')
                 ul.site-menu.js-clone-nav.mr-auto.d-none.d-lg-block
                   li.active
-                    a(href='index.html')
+                    a(href='/')
                       span Home
                   //
                     <li class="has-children">
@@ -54,15 +54,15 @@ html(lang='en')
                     </ul>
                     </li>!
                   li
-                    a(href='about.html')
+                    a(href='/about_us')
                       span About
                   li
-                    a(href='contact.html')
+                    a(href='/contact')
                       span Contact
             .d-inline-block.d-xl-none.ml-md-0.mr-auto.py-3(style='position: relative; top: 3px;')
               a.site-menu-toggle.js-menu-toggle.text-white(href='#')
                 span.icon-menu.h3
-    .site-blocks-cover.overlay(style='background-image: url(http://localhost:5000/theme/images/hero_1.jpg);', data-aos='fade', data-stellar-background-ratio='0.5')
+    .site-blocks-cover.overlay(style='background-image: url(#{baseurl}/theme/images/hero_1.jpg);', data-aos='fade', data-stellar-background-ratio='0.5')
       .container
         .row.align-items-center.justify-content-center.text-center
           .col-md-10
@@ -87,13 +87,13 @@ html(lang='en')
           .col-md-7.text-center.border-primary
             h2.font-weight-light.text-primary Currency List
             p.color-black-opacity-5
-              | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+              | This is an Application that help you to find Counterfeit  Currencies in your hand.
         .row
           -for(i=0;i<notelist.length;i++){
             .col-md-6.mb-4.mb-lg-4.col-lg-4
                 .listing-item
                   .listing-image
-                      img.img-fluid(src='http://localhost:5000/uploads/#{notelist[i].homeimage}', alt='Free Website Template by Free-Template.co')
+                      img.img-fluid(src='#{baseurl}/uploads/#{notelist[i].homeimage}', alt='Free Website Template by Free-Template.co')
                   .listing-item-content
                       
                       
@@ -125,19 +125,19 @@ html(lang='en')
                   span.icon-instagram
                 a.pl-3.pr-3(href='#')
                   span.icon-linkedin
-          script(src='http://localhost:5000/theme/js/jquery-3.3.1.min.js')
-          script(src='http://localhost:5000/theme/js/jquery-migrate-3.0.1.min.js')
-          script(src='http://localhost:5000/theme/js/jquery-ui.js')
-          script(src='http://localhost:5000/theme/js/popper.min.js')
-          script(src='http://localhost:5000/theme/js/bootstrap.min.js')
-          script(src='http://localhost:5000/theme/js/owl.carousel.min.js')
-          script(src='http://localhost:5000/theme/js/jquery.stellar.min.js')
-          script(src='http://localhost:5000/theme/js/jquery.countdown.min.js')
-          script(src='http://localhost:5000/theme/js/jquery.magnific-popup.min.js')
-          script(src='http://localhost:5000/theme/js/bootstrap-datepicker.min.js')
-          script(src='http://localhost:5000/theme/js/aos.js')
-          script(src='http://localhost:5000/theme/js/rangeslider.min.js')
-          script(src='http://localhost:5000/theme/js/typed.js')
+          script(src='#{baseurl}/theme/js/jquery-3.3.1.min.js')
+          script(src='#{baseurl}/theme/js/jquery-migrate-3.0.1.min.js')
+          script(src='#{baseurl}/theme/js/jquery-ui.js')
+          script(src='#{baseurl}/theme/js/popper.min.js')
+          script(src='#{baseurl}/theme/js/bootstrap.min.js')
+          script(src='#{baseurl}/theme/js/owl.carousel.min.js')
+          script(src='#{baseurl}/theme/js/jquery.stellar.min.js')
+          script(src='#{baseurl}/theme/js/jquery.countdown.min.js')
+          script(src='#{baseurl}/theme/js/jquery.magnific-popup.min.js')
+          script(src='#{baseurl}/theme/js/bootstrap-datepicker.min.js')
+          script(src='#{baseurl}/theme/js/aos.js')
+          script(src='#{baseurl}/theme/js/rangeslider.min.js')
+          script(src='#{baseurl}/theme/js/typed.js')
           script.
             $(document).ready(function(){
             $("#search-box").keyup(function(){
@@ -178,4 +178,4 @@ html(lang='en')
             loop: true,
             showCursor: true
             });
-          script(src='http://localhost:5000/theme/js/main.js')
+          script(src='#{baseurl}/theme/js/main.js')

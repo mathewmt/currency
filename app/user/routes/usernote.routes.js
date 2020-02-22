@@ -9,11 +9,4 @@ module.exports = (app) => {
 
     app.get('/readCountry',note1.readCountry);
 
-
-    
-
-   
-
-
-
 }

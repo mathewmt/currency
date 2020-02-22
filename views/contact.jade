@@ -1,0 +1,117 @@
+doctype html
+html(lang='en')
+  head
+    title Browse — Website Template by Colorlib
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(href='https://fonts.googleapis.com/css?family=Rubik:400,700', rel='stylesheet')
+    link(rel='stylesheet', href='#{baseurl}/theme/fonts/icomoon/style.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/bootstrap.min.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/magnific-popup.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/jquery-ui.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/owl.carousel.min.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/owl.theme.default.min.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/bootstrap-datepicker.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/fonts/flaticon/font/flaticon.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/aos.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/rangeslider.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/style.css')
+  body
+    .site-wrap
+      .site-mobile-menu
+        .site-mobile-menu-header
+          .site-mobile-menu-close.mt-3
+            span.icon-close2.js-menu-toggle
+        .site-mobile-menu-body
+      header.site-navbar(role='banner')
+        .container
+          .row.align-items-center
+            .col-11.col-xl-2
+              h1.mb-0.site-logo
+                a.text-white.h2.mb-0(href='index.html') Browse
+            .col-12.col-md-10.d-none.d-xl-block
+              nav.site-navigation.position-relative.text-right(role='navigation')
+                ul.site-menu.js-clone-nav.mr-auto.d-none.d-lg-block
+                  li
+                    a(href='/')
+                      span Home
+                  li
+                    a(href='/about_us')
+                      span About
+                  li.active
+                    a(href='/contact')
+                      span Contact
+            .d-inline-block.d-xl-none.ml-md-0.mr-auto.py-3(style='position: relative; top: 3px;')
+              a.site-menu-toggle.js-menu-toggle.text-white(href='#')
+                span.icon-menu.h3
+    .site-blocks-cover.inner-page-cover.overlay(style='background-image: url(#{baseurl}/theme/images/hero_1.jpg);', data-aos='fade', data-stellar-background-ratio='0.5')
+      .container
+        .row.align-items-center.justify-content-center.text-center
+          .col-md-10(data-aos='fade-up', data-aos-delay='400')
+            .row.justify-content-center
+              .col-md-8.text-center
+                h1 Contact us
+                p(data-aos='fade-up', data-aos-delay='100')
+                  | This is an Application that help you to find Counterfeit  Currencies in your hand.
+    .site-section.bg-light
+      .container
+        .row
+          .col-md-7.mb-5(data-aos='fade')
+            form.p-5.bg-white(action='contact', style='margin-top: -150px;',method='post')
+              .row.form-group
+                .col-md-6.mb-3.mb-md-0
+                  label.text-black(for='fname') First Name
+                  input#fname.form-control(type='text')
+                .col-md-6
+                  label.text-black(for='lname') Last Name
+                  input#lname.form-control(type='text')
+              .row.form-group
+                .col-md-12
+                  label.text-black(for='email') Email
+                  input#email.form-control(type='email')
+              .row.form-group
+                .col-md-12
+                  label.text-black(for='subject') Subject
+                  input#subject.form-control(type='subject')
+              .row.form-group
+                .col-md-12
+                  label.text-black(for='message') Message
+                  textarea#message.form-control(name='message', cols='30', rows='7', placeholder='Write your notes or questions here...')
+              .row.form-group
+                .col-md-12
+                  input.btn.btn-primary.btn-md.text-white(type='submit', value='Send Message')
+               .row.form-group
+                .col-md-12
+                  label.text-black(for='message') #{msg}
+          .col-md-5(data-aos='fade', data-aos-delay='100')
+            .p-4.mb-3.bg-white
+              p.mb-0.font-weight-bold Address
+              p.mb-4 MMT labs, upputhara, kerala, India
+              p.mb-0.font-weight-bold Phone
+              p.mb-4
+                a(href='#') +91 9495277536
+              p.mb-0.font-weight-bold Email Address
+              p.mb-0
+                a(href='#') mathewmt015@gmail.com
+            .p-4.mb-3.bg-white
+              h3.h5.text-black.mb-3 More Info
+              p
+                | This is an Application that help you to find Counterfeit  Currencies in your hand.
+              p
+                a.btn.btn-primary.px-4.py-2.text-white(href='#') Learn More
+    footer.site-footer
+      .container
+        .row
+    script(src='#{baseurl}/theme/js/jquery-3.3.1.min.js')
+    script(src='#{baseurl}/theme/js/jquery-migrate-3.0.1.min.js')
+    script(src='#{baseurl}/theme/js/jquery-ui.js')
+    script(src='#{baseurl}/theme/js/popper.min.js')
+    script(src='#{baseurl}/theme/js/bootstrap.min.js')
+    script(src='#{baseurl}/theme/js/owl.carousel.min.js')
+    script(src='#{baseurl}/theme/js/jquery.stellar.min.js')
+    script(src='#{baseurl}/theme/js/jquery.countdown.min.js')
+    script(src='#{baseurl}/theme/js/jquery.magnific-popup.min.js')
+    script(src='#{baseurl}/theme/js/bootstrap-datepicker.min.js')
+    script(src='#{baseurl}/theme/js/aos.js')
+    script(src='#{baseurl}/theme/js/rangeslider.min.js')
+    script(src='#{baseurl}/theme/js/main.js')

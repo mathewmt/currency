@@ -9,9 +9,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + '/public/uploads' }));
 const mongoose = require('mongoose');
 var multer = require('multer');
+var nodemailer = require('nodemailer');
 
 //mongoose.connect('mongodb://localhost:27017/currency',{useUnifiedTopology: true,useNewUrlParser: true});
-app.use(session({ secret: 'keyboard cat',proxy: true,resave: true,saveUninitialized: true, cookie: { maxAge: 60000 }}));
+app.use(session({ secret: 'keyboard cat',proxy: true,resave: true,saveUninitialized: true, cookie: { maxAge: 600000 }}));
 const dbConfig = require('./config/database.config.js');
 mongoose.Promise = global.Promise;
 require('./app/admin/routes/denomination.routes.js')(app);
@@ -19,6 +20,7 @@ require('./app/admin/routes/country.routes.js')(app);
 require('./app/admin/routes/note.routes.js')(app);
 require('./app/admin/routes/adminuser.routes.js')(app);
 require('./app/user/routes/usernote.routes.js')(app);
+require('./app/user/routes/static.routes.js')(app);
 
 
 mongoose.connect(dbConfig.url, {
@@ -304,7 +306,7 @@ app.get('/homepage',function(req,res){
     
 
 });*/
-
+/*
 app.post('/homepage',function(req,res){
 
     var country = req.body.countryname;
@@ -332,7 +334,7 @@ app.post('/homepage',function(req,res){
 
     
 
-});
+});*/
 /*
 app.get('/readCountry',function(req,res)
 {

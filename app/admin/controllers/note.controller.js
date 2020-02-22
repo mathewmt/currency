@@ -3,6 +3,8 @@ const note          = require('../models/note.model.js');
 const con           = require('../models/country.model.js');
 const deno          = require('../models/denomination.model.js');
 
+const dbConfig = require('../../../config/database.config.js');
+
 
 // Retrieve and return all notes from the database.
 exports.findAll = (req, res) => {
@@ -58,7 +60,7 @@ exports.findAll = (req, res) => {
                                     }
                                     console.log("last",notes);
                                     console.log("last",noteslist);
-                                    res.render('note_list',{notelist: noteslist,noteli: notes,countrylist: countrylist,countryId:country});
+                                    res.render('note_list',{notelist: noteslist,noteli: notes,countrylist: countrylist,countryId:country,baseurl:dbConfig.baseurl});
                                 });
                             });
                         });
@@ -84,19 +86,19 @@ exports.findAll = (req, res) => {
         
         
         if(denomination.amount==500)
-        res.render('note_detail_view_500',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_500',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==200)
-        res.render('note_detail_view_200',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_200',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==50)
-        res.render('note_detail_view_50',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_50',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==2000)
-        res.render('note_detail_view_2000',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_2000',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==20)
-        res.render('note_detail_view_20',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_20',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==100)
-        res.render('note_detail_view_100',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_100',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==10)
-        res.render('note_detail_view_10',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_10',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
     });
 });
     };
@@ -278,7 +280,7 @@ if(req.session.fname)
             if(err) throw err;
             console.log("view",notes[0].homeimage);
             var denominationvalue=  req.params.denovalue;
-            res.render('note_view',{notelist:notes,denomination:denominationvalue});
+            res.render('note_view',{notelist:notes,denomination:denominationvalue,baseurl:dbConfig.baseurl});
         });
     }else{
         res.redirect('/admin');
@@ -293,7 +295,7 @@ exports.home = (req, res) => {
     note.find({countryname: "5e436ae777823942efabf62f"},function(err,notes)
     {
     if(err) throw err;
-    res.render('homepage',{notelist: notes});
+    res.render('homepage',{notelist: notes,baseurl:dbConfig.baseurl});
     });
     };
 
@@ -315,19 +317,19 @@ exports.home = (req, res) => {
         
         
         if(denomination.amount==500)
-        res.render('note_detail_view_500',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_500',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==200)
-        res.render('note_detail_view_200',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_200',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==50)
-        res.render('note_detail_view_50',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_50',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==2000)
-        res.render('note_detail_view_2000',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_2000',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==20)
-        res.render('note_detail_view_20',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_20',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==100)
-        res.render('note_detail_view_100',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_100',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
         if(denomination.amount==10)
-        res.render('note_detail_view_10',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features});
+        res.render('note_detail_view_10',{side1:result.side1,side2:result.side2,side1features:result.side1features,side2features:result.side2features,baseurl:dbConfig.baseurl});
     });
 });
         };
@@ -365,15 +367,16 @@ exports.home = (req, res) => {
 
                 note.find({countryname:countryid},function(err,notes)
                     {
-                    res.render('homepage',{notelist: notes});
+                    res.render('homepage',{notelist: notes,baseurl:dbConfig.baseurl});
                     });
                 }
                 else
                 {
                     var notes=[];
-                    res.render('homepage',{notelist: notes});
+                    res.render('homepage',{notelist: notes,baseurl:dbConfig.baseurl});
                 }
             });
 };
+
 
 

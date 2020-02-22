@@ -9,9 +9,9 @@ block content
           h3 
           h4 Denomination: #{denomination} 
           
-                img(src='http://localhost:5000/uploads/#{notelist[0].homeimage}' style='padding:10px') 
-                img(src='http://localhost:5000/uploads/#{notelist[0].side1}' style='padding:10px') 
-                img(src='http://localhost:5000/uploads/#{notelist[0].side2}' style='padding:10px') 
+                img(src='#{baseurl}/uploads/#{notelist[0].homeimage}' style='padding:10px') 
+                img(src='#{baseurl}/uploads/#{notelist[0].side1}' style='padding:10px') 
+                img(src='#{baseurl}/uploads/#{notelist[0].side2}' style='padding:10px') 
                 br
         .col-sm-1
     footer.container-fluid.text-center

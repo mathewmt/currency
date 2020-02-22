@@ -8,7 +8,7 @@ const user          = require('../models/adminuser.model.js');
             res.redirect('/denomination')	;
         }
         else
-        res.sendFile('login.html', { root:'./'});
+        res.render('login');
     };
 
     exports.login = (req, res) => {

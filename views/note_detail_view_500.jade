@@ -1,10 +1,10 @@
 doctype transitional
 html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-websqldatabase.indexeddb.hashchange.history.draganddrop.websockets.rgba.hsla.multiplebgs.backgroundsize.borderimage.borderradius.boxshadow.textshadow.opacity.cssanimations.csscolumns.cssgradients.no-cssreflections.csstransforms.csstransforms3d.csstransitions.fontface.generatedcontent.video.audio.localstorage.sessionstorage.webworkers.applicationcache.svg.inlinesvg.smil.svgclippaths(xmlns='http://www.w3.org/1999/xhtml')
   head
-    link(rel='stylesheet', href='http://localhost:5000/style.css')
+    link(rel='stylesheet', href='#{baseurl}/style.css')
     // <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
-    script(type='text/javascript', src='http://localhost:5000/jquery-1.7.2.min.js')
-    script(src='http://localhost:5000/plugins.js', type='text/javascript')
+    script(type='text/javascript', src='#{baseurl}/jquery-1.7.2.min.js')
+    script(src='#{baseurl}/plugins.js', type='text/javascript')
     style(type='text/css').
       .imgbrdr{border:4px solid #2469b5;}
       .numberbar2018{left:540px;}
@@ -84,9 +84,9 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
       left: -520px;
       }
       }
-  script(src='http://localhost:5000/main.js', type='text/javascript')
+  script(src='#{baseurl}/main.js', type='text/javascript')
   body
-    link(href='http://localhost:5000/global.css', rel='stylesheet')
+    link(href='#{baseurl}/global.css', rel='stylesheet')
     .section.content
       .wrapper
         .note-tabpanel
@@ -98,9 +98,9 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
           .note-tabdetails
             #box1.note-box
               .note500
-                img(src='http://localhost:5000/uploads/#{side1}', alt='RBI 500')
+                img(src='#{baseurl}/uploads/#{side1}', alt='RBI 500')
               .noteho500
-                img(src='http://localhost:5000/uploads/#{side1}', alt='RBI 500')
+                img(src='#{baseurl}/uploads/#{side1}', alt='RBI 500')
               .notedesc
                 .instruction 
                 .notewrap
@@ -108,7 +108,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 1
                     .numline.numline1
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[0].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[0].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 1
@@ -118,7 +118,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 2
                     .numline.numline2
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[1].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[1].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 2
@@ -128,7 +128,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 3
                     .numline.numline3
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side1features[2].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side1features[2].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 3
@@ -138,7 +138,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 4
                     .numline.numline4
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side1features[3].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side1features[3].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 4
@@ -148,7 +148,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 5
                     .numline.numline2018
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[4].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[4].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 5
@@ -158,7 +158,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 6
                     .numline.numline5
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[5].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[5].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 6
@@ -168,7 +168,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 7
                     .numline.numline6
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[6].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[6].image}', alt='RBI')
                     
                   .descbar
                     .showdescbar
@@ -180,7 +180,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 8
                     .numline.numline7
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[7].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[7].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 8
@@ -190,7 +190,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 9
                     .numline.numline8
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side1features[8].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side1features[8].image}', alt='RBI')
                     
                   .descbar
                     .showdescbar
@@ -202,7 +202,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 10
                     .numline.numline9
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[9].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[9].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 10
@@ -213,7 +213,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 11
                     .numline.numline10
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side1features[10].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side1features[10].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 11
@@ -224,7 +224,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numline.numline11
                     
                     .imgbar.descimg2
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[11].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[11].image}', alt='RBI')
                     
                   .descbar
                     .desctxt1
@@ -238,7 +238,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 13
                     .numline.numline12
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side1features[12].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side1features[12].image}', alt='RBI')
                     
                   .descbar
                     .desctxt1
@@ -249,9 +249,9 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                       .desctxt #{side1features[12].feature}
             #box2.note-box
               .note500
-                img(src='http://localhost:5000/uploads/#{side2}', alt='RBI 500')
+                img(src='#{baseurl}/uploads/#{side2}', alt='RBI 500')
               .noteho500
-                img(src='http://localhost:5000/uploads/#{side2}', alt='RBI 500')
+                img(src='#{baseurl}/uploads/#{side2}', alt='RBI 500')
               .notedesc
                 .instruction 
                 .notewrap
@@ -259,7 +259,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 14
                     .numline.numline13
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side2features[0].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side2features[0].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 14
@@ -269,7 +269,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 15
                     .numline.numline14
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side2features[1].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side2features[1].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 15
@@ -279,7 +279,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 16
                     .numline.numline15
                     .imgbar.descimg1
-                      img.imgbrdr(src='http://localhost:5000/uploads/#{side2features[2].image}', alt='RBI')
+                      img.imgbrdr(src='#{baseurl}/uploads/#{side2features[2].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 16
@@ -289,7 +289,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 17
                     .numline.numline16
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side2features[3].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side2features[3].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 17
@@ -299,7 +299,7 @@ html.js.no-flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.no-w
                     .numcircle 18
                     .numline.numline17
                     .imgbar.descimg1
-                      img(src='http://localhost:5000/uploads/#{side2features[4].image}', alt='RBI')
+                      img(src='#{baseurl}/uploads/#{side2features[4].image}', alt='RBI')
                   .descbar
                     .showdescbar
                       .descnum 18

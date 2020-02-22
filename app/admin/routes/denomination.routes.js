@@ -19,4 +19,6 @@ module.exports = (app) => {
 
     // Delete a Note with noteId
     app.get('/denodelete/:denominationId', denomination.delete);
+
+    
 }

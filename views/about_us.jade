@@ -1,0 +1,127 @@
+doctype html
+html(lang='en')
+  head
+    title Browse — Website Template by Colorlib
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(href='https://fonts.googleapis.com/css?family=Rubik:400,700', rel='stylesheet')
+    link(rel='stylesheet', href='#{baseurl}/theme/fonts/icomoon/style.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/bootstrap.min.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/magnific-popup.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/jquery-ui.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/owl.carousel.min.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/owl.theme.default.min.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/bootstrap-datepicker.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/fonts/flaticon/font/flaticon.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/aos.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/rangeslider.css')
+    link(rel='stylesheet', href='#{baseurl}/theme/css/style.css')
+  body
+    .site-wrap
+      .site-mobile-menu
+        .site-mobile-menu-header
+          .site-mobile-menu-close.mt-3
+            span.icon-close2.js-menu-toggle
+        .site-mobile-menu-body
+      header.site-navbar(role='banner')
+        .container
+          .row.align-items-center
+            .col-11.col-xl-2
+              h1.mb-0.site-logo
+                a.text-white.h1.b.mb-0(href='index.html') CND
+            .col-12.col-md-10.d-none.d-xl-block
+              nav.site-navigation.position-relative.text-right(role='navigation')
+                ul.site-menu.js-clone-nav.mr-auto.d-none.d-lg-block
+                  li
+                    a(href='/')
+                      span Home
+                  li.active
+                    a(href='/about_us')
+                      span About
+                  li
+                    a(href='/contact')
+                      span Contact
+            .d-inline-block.d-xl-none.ml-md-0.mr-auto.py-3(style='position: relative; top: 3px;')
+              a.site-menu-toggle.js-menu-toggle.text-white(href='#')
+                span.icon-menu.h3
+    .site-blocks-cover.inner-page-cover.overlay(style='background-image: url(#{baseurl}/theme/images/hero_1.jpg);', data-aos='fade', data-stellar-background-ratio='0.5')
+      .container
+        .row.align-items-center.justify-content-center.text-center
+          .col-md-10(data-aos='fade-up', data-aos-delay='400')
+            .row.justify-content-center
+              .col-md-8.text-center
+                h1 About Us
+                p(data-aos='fade-up', data-aos-delay='100')
+                  | This is an Application that help you to find Counterfeit  Currencies in your hand.
+    .site-section
+      .container
+        .row.align-items-center
+          .col-md-6
+            img.img-fluid.rounded(src='#{baseurl}/theme/images/16571_1000.jpg', alt='Image')
+          .col-md-5.ml-auto
+            h2.text-primary.mb-3 About
+            p
+              | in the present day there is no simple way to detect counterfeirt currencies in our hand .The only way to find the counterfeit note is by using the Counter machine and the issue raised with the machines are portability and expense so ,it is not applicable for common people!
+            p.mb-4
+              | To avoid this problem we are introducing an application to find the counterfeit note .Which is Simple,Free and Poratable
+    .site-section
+      .container
+        .row.justify-content-center.mb-5
+          .col-md-7.text-center.border-primary
+            h2.font-weight-light.text-primary Frequently Ask Question
+            p.color-black-opacity-5 Lorem Ipsum Dolor Sit Amet
+        .row.justify-content-center
+          .col-8
+            .border.p-3.rounded.mb-2
+              a.accordion-item.h5.d-block.mb-0(data-toggle='collapse', href='#collapse-1', role='button', aria-expanded='false', aria-controls='collapse-1') How to list my item?
+              #collapse-1.collapse
+                .pt-2
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.
+            .border.p-3.rounded.mb-2
+              a.accordion-item.h5.d-block.mb-0(data-toggle='collapse', href='#collapse-4', role='button', aria-expanded='false', aria-controls='collapse-4') Is this available in my country?
+              #collapse-4.collapse
+                .pt-2
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.
+            .border.p-3.rounded.mb-2
+              a.accordion-item.h5.d-block.mb-0(data-toggle='collapse', href='#collapse-2', role='button', aria-expanded='false', aria-controls='collapse-2') Is it free?
+              #collapse-2.collapse
+                .pt-2
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.
+            .border.p-3.rounded.mb-2
+              a.accordion-item.h5.d-block.mb-0(data-toggle='collapse', href='#collapse-3', role='button', aria-expanded='false', aria-controls='collapse-3') How the system works?
+              #collapse-3.collapse
+                .pt-2
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.
+    .py-5.bg-primary
+      .container
+    footer.site-footer
+      .container
+      .row.pt-5.mt-5
+        .col-12.text-md-center.text-left
+          p
+            // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+            | Copyright ©
+            script.
+              document.write(new Date().getFullYear());
+            
+            i.icon-heart.text-danger(aria-hidden='true')
+            |  by 
+            a(href='https://colorlib.com', target='_blank') Colorlib
+            // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+    script(src='#{baseurl}/theme/js/jquery-3.3.1.min.js')
+    script(src='#{baseurl}/theme/js/jquery-migrate-3.0.1.min.js')
+    script(src='#{baseurl}/theme/js/jquery-ui.js')
+    script(src='#{baseurl}/theme/js/popper.min.js')
+    script(src='#{baseurl}/theme/js/bootstrap.min.js')
+    script(src='#{baseurl}/theme/js/owl.carousel.min.js')
+    script(src='#{baseurl}/theme/js/jquery.stellar.min.js')
+    script(src='#{baseurl}/theme/js/jquery.countdown.min.js')
+    script(src='#{baseurl}/theme/js/jquery.magnific-popup.min.js')
+    script(src='#{baseurl}/theme/js/bootstrap-datepicker.min.js')
+    script(src='#{baseurl}/theme/js/aos.js')
+    script(src='#{baseurl}/theme/js/rangeslider.min.js')
+    script(src='#{baseurl}/theme/js/main.js')
