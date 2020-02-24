@@ -1,0 +1,50 @@
+extend layout
+
+block content
+        .col-sm-9.text-left
+          div(style='text-align: left; padding-top: 25px;')
+            form(action='/note_list', method='post')
+              if countrylist
+                        select(id ="country" name="countryId" required='true' onchange="this.form.submit()")
+                         
+                          option( value='all') All
+                          each item in countrylist
+                            - if(countryId==item._id) 
+                                 option( selected value=item._id) #{item.countryname}
+                            - else
+                                 option( value=item._id) #{item.countryname}
+              else
+                          select(id ="country" name="countryId" )
+                            option(value="") no value
+          div(style='text-align: right; padding-top: 25px;')
+           a(href='/add_new_note') Add new
+          table.table.table-striped
+                    thead
+                      tr
+                        th SlNo
+                        th Denomination value
+                        th Country Name
+                        th Action
+                          - var count = 1;
+                          -for (var i = 0; i < notelist.length; i++) {
+                              -if(notelist[i]._id==noteli[i]._id)
+                                        
+                                    
+                      tr
+                                            
+                          td=count
+                          td=notelist[i].denovalue
+                          td=noteli[i].countrycode
+                          
+                          td
+                            a(href='/note_delete/'+noteli[i]._id) delete
+                          td
+                            a(href='/note_view/'+notelist[i]._id+'/'+notelist[i].denovalue) View
+
+                            - count++;
+                
+                        -}                    
+          .col-sm-1
+          footer.container-fluid.text-center
+            p Footer Text
+          
