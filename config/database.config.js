@@ -1,5 +1,5 @@
 module.exports = {
-    url: 'mongodb://localhost:27017/currency',
-    baseurl:'http://localhost:5000'
+    url: 'mongodb+srv://mathew:mathew123%231@cluster0-ps3u1.mongodb.net/currency?retryWrites=true&w=majority',
+    baseurl:'https://counterfeit.herokuapp.com'
 }
 
