@@ -9,9 +9,9 @@ block content
                          
                           option( value='all') All
                           each item in countrylist
-                            -if(countryId==item._id) 
+                            - if(countryId==item._id) 
                                  option( selected value=item._id) #{item.countryname}
-                            -else
+                            - else
                                  option( value=item._id) #{item.countryname}
               else
                           select(id ="country" name="countryId" )
@@ -25,9 +25,9 @@ block content
                         th Denomination value
                         th Country Name
                         th Action
-                              - var count = 1;
+                          - var count = 1;
                           -for (var i = 0; i < notelist.length; i++) {
-                              -if(notelist[i]._id==noteli[i]._id)
+                              if(notelist[i]._id==noteli[i]._id)
                                         
                                     
                       tr
