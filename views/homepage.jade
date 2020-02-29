@@ -28,7 +28,7 @@ html(lang='en')
           .row.align-items-center
             .col-11.col-xl-2
               h1.mb-0.site-logo
-                a.text-white.h1.mb-0(href='index.html') CND
+                a.text-white.h1.mb-0(href='/') CND
             .col-12.col-md-10.d-none.d-xl-block
               nav.site-navigation.position-relative.text-right(role='navigation')
                 ul.site-menu.js-clone-nav.mr-auto.d-none.d-lg-block
@@ -75,7 +75,7 @@ html(lang='en')
               form(method='post' action='/')
                 .row.align-items-center
                   .col-lg-12.col-xl-10.no-sm-border.border-right
-                    input.form-control(type='text', id="search-box", name="countryname"  placeholder='What are you looking for?')
+                    input.form-control(type='text', id="search-box", name="countryname"  placeholder='Which country do you want?')
                   
                     
                      
@@ -110,11 +110,10 @@ html(lang='en')
                 h2.footer-heading.mb-4 Features
                 ul.list-unstyled
                   li
-                    a(href='#') About Us
+                    a(href='/about_us') About Us
+               
                   li
-                    a(href='#') Services
-                  li
-                    a(href='#') Contact Us
+                    a(href='/contact') Contact Us
               .col-md-6.mb-5.mb-lg-0.col-lg-3
                 h2.footer-heading.mb-4 Follow Us
                 a.pl-0.pr-3(href='#')

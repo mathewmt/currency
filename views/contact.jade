@@ -28,7 +28,7 @@ html(lang='en')
           .row.align-items-center
             .col-11.col-xl-2
               h1.mb-0.site-logo
-                a.text-white.h2.mb-0(href='index.html') Browse
+                a.text-white.h2.mb-0(href='/') CND
             .col-12.col-md-10.d-none.d-xl-block
               nav.site-navigation.position-relative.text-right(role='navigation')
                 ul.site-menu.js-clone-nav.mr-auto.d-none.d-lg-block
@@ -61,22 +61,22 @@ html(lang='en')
               .row.form-group
                 .col-md-6.mb-3.mb-md-0
                   label.text-black(for='fname') First Name
-                  input#fname.form-control(type='text')
+                  input#fname.form-control(type='text', required='true')
                 .col-md-6
                   label.text-black(for='lname') Last Name
-                  input#lname.form-control(type='text')
+                  input#lname.form-control(type='text', required='true')
               .row.form-group
                 .col-md-12
                   label.text-black(for='email') Email
-                  input#email.form-control(type='email')
+                  input#email.form-control(type='email', required='true')
               .row.form-group
                 .col-md-12
                   label.text-black(for='subject') Subject
-                  input#subject.form-control(type='subject')
+                  input#subject.form-control(type='subject', required='true')
               .row.form-group
                 .col-md-12
                   label.text-black(for='message') Message
-                  textarea#message.form-control(name='message', cols='30', rows='7', placeholder='Write your notes or questions here...')
+                  textarea#message.form-control(name='message', cols='30', rows='7', placeholder='Write your notes or questions here...', required='true')
               .row.form-group
                 .col-md-12
                   input.btn.btn-primary.btn-md.text-white(type='submit', value='Send Message')
